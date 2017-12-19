@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <h3> Weather for {{ city_name }} for {{ date }}</h3>
+  <br>
+
+  <p> {{ condition }}</p>
+  <p> {{ condition_description }} </p>
+  <p>Temperature: {{ temp }}</p>
+
+  <h4>Details:</h4>
+  <p>Humidity: {{ general_data['main']['humidity'] }} </p>
+  <p>Pressure: {{ general_data['main']['pressure'] }} </p>
+  <p>Wind: {{ general_data['wind']['speed'] }}</p>
+{% endblock %}
